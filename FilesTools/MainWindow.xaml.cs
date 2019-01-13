@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WinForms = System.Windows.Forms;
 
 namespace FilesTools
 {
@@ -23,6 +24,47 @@ namespace FilesTools
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void btn_src_one_Click(object sender, RoutedEventArgs e)
+        {
+            WinForms.FolderBrowserDialog folderDialog = new WinForms.FolderBrowserDialog();
+
+            folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            WinForms.DialogResult result = folderDialog.ShowDialog();
+
+            if (result == WinForms.DialogResult.OK)
+            {
+                sourceOne.Text = folderDialog.SelectedPath;
+            }
+        }
+
+        private void btn_src_two_Click(object sender, RoutedEventArgs e)
+        {
+            WinForms.FolderBrowserDialog folderDialog = new WinForms.FolderBrowserDialog();
+
+            folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            WinForms.DialogResult result = folderDialog.ShowDialog();
+
+            if (result == WinForms.DialogResult.OK)
+            {
+                sourceTwo.Text = folderDialog.SelectedPath;
+            }
+
+        }
+
+        private void btn_diff_Click(object sender, RoutedEventArgs e)
+        {
+            WinForms.FolderBrowserDialog folderDialog = new WinForms.FolderBrowserDialog();
+
+            folderDialog.SelectedPath = System.AppDomain.CurrentDomain.BaseDirectory;
+            WinForms.DialogResult result = folderDialog.ShowDialog();
+
+            if (result == WinForms.DialogResult.OK)
+            {
+                diffrents.Text = folderDialog.SelectedPath;
+            }
+
         }
     }
 }

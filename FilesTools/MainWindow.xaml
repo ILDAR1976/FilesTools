@@ -6,17 +6,19 @@
         xmlns:local="clr-namespace:FilesTools"
         mc:Ignorable="d"
         Title="Files tools" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="2,0,-2,0">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="59*"/>
-            <ColumnDefinition Width="733*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="787*"/>
         </Grid.ColumnDefinitions>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="731" Grid.ColumnSpan="2"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="687,29,0,0" VerticalAlignment="Top" Width="26" Height="23" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="731" Grid.ColumnSpan="2"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="687,57,0,0" VerticalAlignment="Top" Width="26" Height="23" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="10,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="731" Grid.ColumnSpan="2"/>
-        <Button Content="..." HorizontalAlignment="Left" Margin="687,85,0,0" VerticalAlignment="Top" Width="26" Height="23" Grid.Column="1"/>
-
+        <TextBox x:Name="sourceOne" HorizontalAlignment="Left" Height="23" Margin="2,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="739" Grid.Column="1"/>
+        <Button x:Name="btn_src_one" Content="..." HorizontalAlignment="Left" Margin="741,29,0,0" VerticalAlignment="Top" Width="26" Height="23" Grid.Column="1" Click="btn_src_one_Click"/>
+        <TextBox x:Name="sourceTwo" HorizontalAlignment="Left" Height="23" Margin="2,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="739" Grid.Column="1"/>
+        <Button x:Name="btn_src_two" Content="..." HorizontalAlignment="Left" Margin="741,57,0,0" VerticalAlignment="Top" Width="26" Height="23" Grid.Column="1" Click="btn_src_two_Click"/>
+        <TextBox x:Name="diffrents" HorizontalAlignment="Left" Height="23" Margin="2,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="739" Grid.Column="1"/>
+        <Button x:Name="btn_diff" Content="..." HorizontalAlignment="Left" Margin="741,85,0,0" VerticalAlignment="Top" Width="26" Height="23" Grid.Column="1" Click="btn_diff_Click"/>
+        <Border BorderThickness="1" BorderBrush="Black" Margin="2,113,20,10" Grid.Column="1">
+            <TextBlock HorizontalAlignment="Left" Margin="-1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="296" Width="765"/>
+        </Border>
     </Grid>
 </Window>
